@@ -1,0 +1,58 @@
+Demonstrating with string matrix:
+Congra y ar 
+alm don La 
+
+Matrix incremented by second array
+CongraA yB arC 
+almD donE LaF 
+
+testing setMatrix with 1D array
+a b c 
+d e f 
+
+testing setMatrix with 2D array
+a b c 
+d e f 
+
+Demonstrating with int matrix:
+Matrix set to first array
+1 2 3 
+4 5 6 
+
+Matrix incremented by second array
+6 5 4 
+3 2 1 
+
+Matrix incremented by second array
+7 7 7 
+7 7 7 
+
+testing setMatrix with 1D array
+100 200 300 
+400 0 0 
+
+testing setMatrix with 2D array
+100 200 300 
+400 500 600 
+
+ Demonstrating with float matrix:
+Matrix set to first array
+1.6 2.5 3.4 
+4.3 5.2 6.1 
+
+Matrix incremented by second array
+6.1 5.2 4.3 
+3.4 2.5 1.6 
+
+Matrix incremented by second array
+7.7 7.7 7.7 
+7.7 7.7 7.7 
+
+testing setMatrix with 1D array
+100.1 200.2 300.3 
+400.4 0 0 
+
+testing setMatrix with 2D array
+100.1 200.2 300.3 
+400.4 500.5 600.6 
+
