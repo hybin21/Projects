@@ -85,8 +85,8 @@ public:
 
 
 private:
-    Node *head;  // CALC - head of the IntList
-    Node *tail;  // CALC - tail of the IntList
+    Node<T> *head;  // CALC - head of the IntList
+    Node<T> *tail;  // CALC - tail of the IntList
 
     /***************
     **  ACCESSOR  **
