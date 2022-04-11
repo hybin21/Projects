@@ -236,9 +236,8 @@ const T& LinkedList<T>::front()
 template<typename T>
 const T & LinkedList<T>::back()
 {   
-    throw(this);
     ListEmpty check(this);
-    (ListEmpty.checkEmptyList())
+    if(check.checkEmptyList())
         return tail->data;
     return 0;
 }
