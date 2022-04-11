@@ -64,8 +64,8 @@ public:
     /***************
     **  ACCESSOR  **
     ****************/
-    const T & front();
-    const T & back();
+    const T & front() const throw(ListEmpty);
+    const T & back() const throw(ListEmpty);
     Iterator begin();
     Iterator end();
     int length() const;
@@ -225,19 +225,21 @@ LinkedList<T>& LinkedList<T>::operator=(const LinkedList<T> & source)
 }
 
 template<typename T>
-const T& LinkedList<T>::front() 
+const T& LinkedList<T>::front() const throw(ListEmpty<T>)
 {
     ListEmpty check(this);
-    if(check.checkEmptyList())
+    throw(check);
+    if(!check.checkEmptyList())
         return head->data;
     return 0;
 }
 
 template<typename T>
-const T & LinkedList<T>::back()
+const T & LinkedList<T>::back() const throw(ListEmpty<T>)
 {   
     ListEmpty check(this);
-    if(check.checkEmptyList())
+    throw(check);
+    if(!check.checkEmptyList())
         return tail->data;
     return 0;
 }

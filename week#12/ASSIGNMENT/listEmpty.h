@@ -8,13 +8,18 @@ class ListEmpty
     LinkedList<T> check;
     
 public:
+    ListEmpty();
     ListEmpty(const LinkedList & empty):check(empty);
     ~ListEmpty();
     bool checkEmptyList();
 };
 #endif
 
-
+template<typename T>
+ListEmpty<T>::ListEmpty()
+{
+    check = new Node();
+}
 
 template<typename T>
 ListEmpty<T>::~ListEmpty()
@@ -32,15 +37,14 @@ ListEmpty<T>::~ListEmpty()
 template<typename T>
 bool ListEmpty<T>::checkEmptyList()
 {
-    throw(check);
     try 
-        if(check.head != NULL && check.tail != NULL);
-    catch(true)
-        return true;
+        if(check.head == NULL && check.tail = NULL);
     catch(false)
+        return false;
+    catch(true)
     {
         cout << "Exception: The linked List is emtpy\n";
-        return  false;
+        return  true;
     }
         
 }
