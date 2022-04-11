@@ -32,6 +32,7 @@ ListEmpty<T>::~ListEmpty()
 template<typename T>
 bool ListEmpty<T>::checkEmptyList()
 {
+    throw(check);
     try 
         if(check.head != NULL && check.tail != NULL);
     catch(true)

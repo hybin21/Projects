@@ -227,8 +227,8 @@ LinkedList<T>& LinkedList<T>::operator=(const LinkedList<T> & source)
 template<typename T>
 const T& LinkedList<T>::front() 
 {
-    throw(this);
-    if(ListEmpty.checkEmptyList())
+    ListEmpty check(this);
+    if(check.checkEmptyList())
         return head->data;
     return 0;
 }
@@ -237,7 +237,8 @@ template<typename T>
 const T & LinkedList<T>::back()
 {   
     throw(this);
-    if(ListEmpty.checkEmptyList())
+    ListEmpty check(this);
+    (ListEmpty.checkEmptyList())
         return tail->data;
     return 0;
 }
