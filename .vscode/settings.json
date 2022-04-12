@@ -70,6 +70,8 @@
         "stack": "cpp",
         "variant": "cpp",
         "__functional_03": "cpp",
-        "__memory": "cpp"
+        "__memory": "cpp",
+        "compare": "cpp",
+        "concepts": "cpp"
     }
 }

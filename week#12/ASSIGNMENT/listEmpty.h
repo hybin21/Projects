@@ -1,53 +1,18 @@
 #ifndef LISTEMPTY_H
-#define LISTEMTPY_H
+#define LISTEMPTY_H
 #include "linkedList.h"
+#include <iostream>
+using namespace std;
 
-template<typename T>
 class ListEmpty
 {   
-    LinkedList<T> check;
+    private:
+        string message;
     
 public:
-    ListEmpty();
-    ListEmpty(const LinkedList & empty):check(empty);
-    ~ListEmpty();
-    bool checkEmptyList();
+    ListEmpty(){message = "List is empty!";}
+    ListEmpty(string input){message = input;}
+    string what() {return message;}
 };
 #endif
-
-template<typename T>
-ListEmpty<T>::ListEmpty()
-{
-    check = new Node();
-}
-
-template<typename T>
-ListEmpty<T>::~ListEmpty()
-{
-    Node * current = check.head;
-    while(!current)
-    {
-        Node * next = check.current->next;
-        delete check.current;
-        check.current = next;
-    }
-
-
-}
-template<typename T>
-bool ListEmpty<T>::checkEmptyList()
-{
-    try 
-        if(check.head == NULL && check.tail = NULL);
-    catch(false)
-        return false;
-    catch(true)
-    {
-        cout << "Exception: The linked List is emtpy\n";
-        return  true;
-    }
-        
-}
-
-
 

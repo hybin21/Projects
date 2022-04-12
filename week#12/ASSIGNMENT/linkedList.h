@@ -21,10 +21,11 @@ struct Node
 template <typename T>
 class LinkedList
 {
+    public:
     class Iterator
     {
         private: 
-            Node * current;  // IN - current position of the linked list
+            Node<T> * current;  // IN - current position of the linked list
         public:
 
         /****************
@@ -77,11 +78,11 @@ public:
     ****************/
     void push_front(const T & value);
     void push_back(const T & value);
-    void pop_front();
+    void pop_front() throw(ListEmpty);
     void clear();
     void select_sort();
     void insert_sorted(const T & value);
-    void remove_dupliccates();
+    void remove_duplicates();
 
 
 private:
@@ -96,7 +97,7 @@ private:
     void Display_Reverse
                 (Node<T> * ptr) const;  // IN - position to be calculated
 };
-#endif
+
 
 template<typename T>
 LinkedList<T>::Iterator::Iterator()
@@ -137,7 +138,7 @@ bool LinkedList<T>::Iterator::operator==(const LinkedList<T>::Iterator& right) c
         return false;
     }
     */
-    return(current == right.current)
+    return(current == right.current);
 }
 
 template<typename T>
@@ -225,23 +226,21 @@ LinkedList<T>& LinkedList<T>::operator=(const LinkedList<T> & source)
 }
 
 template<typename T>
-const T& LinkedList<T>::front() const throw(ListEmpty<T>)
+const T& LinkedList<T>::front() const throw(ListEmpty)
 {
-    ListEmpty check(this);
-    throw(check);
-    if(!check.checkEmptyList())
+    if(head == NULL)
+        throw(ListEmpty)
+    else
         return head->data;
-    return 0;
 }
 
 template<typename T>
-const T & LinkedList<T>::back() const throw(ListEmpty<T>)
+const T & LinkedList<T>::back() const throw(ListEmpty)
 {   
-    ListEmpty check(this);
-    throw(check);
-    if(!check.checkEmptyList())
+    if(head == NULL)
+        throw(ListEmpty)
+    else 
         return tail->data;
-    return 0;
 }
 
 template<typename T>
@@ -346,10 +345,11 @@ void LinkedList<T>::push_back(const T & value)
 }
 
 template<typename T>
-void LinkedList<T>::pop_front()
+void LinkedList<T>::pop_front() throw(ListEmpty)
 {
-    throw(this);
-    if(ListEmpty.checkEmptyList())
+    if(head == NULL)
+        throw(ListEmpty)
+    else
     {
         if(head)
         {
@@ -427,7 +427,7 @@ void LinkedList<T>::insert_sorted(const T & value)
 }
 
 template<typename T>
-void LinkedList<T>::remove_dupliccates()
+void LinkedList<T>::remove_duplicates()
 {
     Node * current = head;
     Node * p;
@@ -462,3 +462,5 @@ void LinkedList<T>::remove_dupliccates()
         }
     }
 }
+
+#endif
