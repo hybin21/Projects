@@ -11,6 +11,7 @@
 
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
+#include <QtWidgets/QLabel>
 #include <QtWidgets/QLineEdit>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenuBar>
@@ -30,6 +31,8 @@ public:
     QSlider *SLIDER;
     QPushButton *F_BUTTON;
     QPushButton *C_BUTTON;
+    QLabel *current;
+    QLabel *converted;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -48,7 +51,7 @@ public:
         OUTPUT_BOX->setGeometry(QRect(150, 240, 141, 41));
         SLIDER = new QSlider(centralwidget);
         SLIDER->setObjectName(QString::fromUtf8("SLIDER"));
-        SLIDER->setGeometry(QRect(140, 190, 160, 25));
+        SLIDER->setGeometry(QRect(140, 180, 160, 25));
         SLIDER->setOrientation(Qt::Horizontal);
         F_BUTTON = new QPushButton(centralwidget);
         F_BUTTON->setObjectName(QString::fromUtf8("F_BUTTON"));
@@ -56,6 +59,12 @@ public:
         C_BUTTON = new QPushButton(centralwidget);
         C_BUTTON->setObjectName(QString::fromUtf8("C_BUTTON"));
         C_BUTTON->setGeometry(QRect(230, 110, 61, 51));
+        current = new QLabel(centralwidget);
+        current->setObjectName(QString::fromUtf8("current"));
+        current->setGeometry(QRect(160, 30, 131, 20));
+        converted = new QLabel(centralwidget);
+        converted->setObjectName(QString::fromUtf8("converted"));
+        converted->setGeometry(QRect(150, 220, 141, 20));
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
@@ -73,8 +82,10 @@ public:
     void retranslateUi(QMainWindow *MainWindow)
     {
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "MainWindow", nullptr));
-        F_BUTTON->setText(QCoreApplication::translate("MainWindow", "F", nullptr));
-        C_BUTTON->setText(QCoreApplication::translate("MainWindow", "C", nullptr));
+        F_BUTTON->setText(QCoreApplication::translate("MainWindow", "F->C", nullptr));
+        C_BUTTON->setText(QCoreApplication::translate("MainWindow", "C->F", nullptr));
+        current->setText(QCoreApplication::translate("MainWindow", "Current Temperature", nullptr));
+        converted->setText(QCoreApplication::translate("MainWindow", "Converted Temperature", nullptr));
     } // retranslateUi
 
 };

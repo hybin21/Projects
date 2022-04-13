@@ -278,7 +278,7 @@ void IntList::insert_sorted(int value)  // IN - value of the new node
 void IntList::remove_duplicates()
 {
     IntNode * current = head;   // CALC - points current position
-    IntNode * p;                // CALC - points node before current node
+    IntNode * p = current;      // CALC - points node before current node
     IntNode * n;                // CALC - points node after current node
     IntNode * temp;             // CALC - points temporary node to be deleted
     
@@ -286,27 +286,18 @@ void IntList::remove_duplicates()
     {
         while(current)
         {
-            if(current == head)
-                p = head;
-            else
-                p = current;
-            
-            n = p->next;
+            n = current->next;
             while(n)
             {
                 if(n->data == current->data)
                 {
                     temp = n;
-                    p->next = n->next;
+                    p->next = n;
                     delete temp;
-                    n = p->next;
                 }
-                else
-                {
-                    n = n->next;
-                    p = p->next;
-                }
+                n = n->next;
             }
+            p = current;
             current = current->next;
         }
     }

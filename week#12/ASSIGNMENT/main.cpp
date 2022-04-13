@@ -1,3 +1,10 @@
+/*******************************************************************************
+ * AUTHOR         : Jessica Hahm
+ * ASSIGNMENT 09  : LinkedList - Templates and Exceptions
+ * CLASS          : CS3A
+ * SECTION        : 32276
+ * DUE DATE       : 04/13/22
+*******************************************************************************/
 #include <iostream>
 #include "linkedList.h"
 #include <stdlib.h>     /* srand, rand */
@@ -5,17 +12,56 @@
 
 using namespace std;
 
+
+/*******************************************************************************
+ *
+ * LinkedList - Templates and Exceptions
+ *_________________________________________________________________
+ * <description>
+ * This programs generalizes the linkedList using templates to be able to store 
+ *  list of data of whatever data type the user specifies. Also implenates a 
+ *  ListEmtpy exception class
+ *_________________________________________________________________
+ * INPUTS:
+ *  N/A
+ *
+ * OUTPUTS:
+ *  displays linked list with data type that user used
+ * 
+ *
+*******************************************************************************/
+
+/*******************************************************************************
+ * testInts()
+ *  This function tests intList
+ *  - returns nothing
+ *      
+*******************************************************************************/
 void testInts();
+
+/*******************************************************************************
+ * testDoubles()
+ *  This function tests doubleList
+ *  - returns nothing
+ *      
+*******************************************************************************/
 void testDoubles();
-void testStrings();
+
+/*******************************************************************************
+ * testChars()
+ *  This function tests charList
+ *  - returns nothing
+ *      
+*******************************************************************************/
+void testChars();
 
 int main()
 { 
-    int choice;
+    int choice; // IN - user's option
     
     cout << "Choose a data type to test template with" << endl;
 
-    cout << "1.integer\n2.doubles\n3.strings" << endl;
+    cout << "1.integer\n2.doubles\n3.characters" << endl;
     cin >> choice;
 
     switch(choice)
@@ -27,22 +73,37 @@ int main()
             testDoubles();
             break;
         case 3:
-            testStrings();
+            testChars();
             break;
         default:
-            testStrings();
+            testChars();
             break;
     }
     
     return 0;
 }
 
+/*****************************************************************************
+ * testInts()
+ *
+ * ---------------------------------------------------------------------------
+ * This function tests intList
+ *
+ * ---------------------------------------------------------------------------
+ * PRE-CONDITION
+ *   The following need previously defined values:
+ *      none
+ *
+ * POST-CONDITIONç
+ *   int type linkedlist is created
+ *
+ *****************************************************************************/
 void testInts()
 {
-    LinkedList<int> L1;
-    LinkedList<int> L2;
+    LinkedList<int> L1; // CALC/OUT - intList
+    LinkedList<int> L2; // CALC/OUT - intList
     
-    LinkedList<int>::Iterator it;
+    LinkedList<int>::Iterator it;   // CALC - intList Iterator
 
     cout << "Testing front() back() and pop_front() on empty list" << endl;
     try
@@ -148,11 +209,28 @@ void testInts()
     }
 	cout << endl;  
 }
+
+/*****************************************************************************
+ * testDoubles()
+ *
+ * ---------------------------------------------------------------------------
+ * This function tests doubleList
+ *
+ * ---------------------------------------------------------------------------
+ * PRE-CONDITION
+ *   The following need previously defined values:
+ *      none
+ *
+ * POST-CONDITIONç
+ *   double type linkedlist is created
+ *
+ *****************************************************************************/
 void testDoubles()
 {
-    LinkedList<double> L1, L2;
+    LinkedList<double> L1;  // CALC/OUT - doubleList
+    LinkedList<double> L2;  // CALC/OUT - doubleList
     
-    LinkedList<double>::Iterator it;
+    LinkedList<double>::Iterator it;    // CALC - doubleList Iterator
 
     cout.setf(ios::fixed);
     cout.setf(ios::showpoint);
@@ -255,14 +333,33 @@ void testDoubles()
 	cout << endl;
 	cout << endl;
 }
-void testStrings()
-{
-    LinkedList<string> L1, L2;
-    
-    LinkedList<string>::Iterator it;
 
-    string words[] = {"Hello","Angel","CS003A","Happy","Food",
-          "Computer","Science","Tacos","Dog","Guitar"};
+/*****************************************************************************
+ * testChars()
+ *
+ * ---------------------------------------------------------------------------
+ * This function tests charList
+ *
+ * ---------------------------------------------------------------------------
+ * PRE-CONDITION
+ *   The following need previously defined values:
+ *      none
+ *
+ * POST-CONDITIONç
+ *   char type linkedlist is created
+ *
+ *****************************************************************************/
+void testChars()
+{
+    LinkedList<char> L1;    // CALC/OUT - charList
+    LinkedList<char> L2;    // CALC/OUT - charList
+    
+    LinkedList<char>::Iterator it;  // CALC - charList iterator
+
+    char arr[] = {'a','b','c','d','e',  // IN - char list
+            'f','g','h','i','j','k','l',
+            'm','n','o','p','q','r','s',
+            't','u','v','w','x','y','z'};   
 
 
 
@@ -293,18 +390,18 @@ void testStrings()
     L1.display();
     
     cout << "\nTesting display function on one item List\n";
-    L1.push_front("Hello");
+    L1.push_front('a');
     L1.display();
     cout << endl;
     
     cout << "\nTesting display function on two item List\n";
-    L1.push_front("World");
+    L1.push_front('c');
     L1.display();
     cout << endl;
     
     cout << "\nTesting push_front function (by calling it 10 times)\n";
     for (unsigned i = 0; i < 10; i++){
-        L1.push_front(words[i]);
+        L1.push_front(arr[i]);
     }
     
     cout << "Testing display function on list with several items\n";
@@ -325,7 +422,7 @@ void testStrings()
 
     cout << "\nTesting push_back function (by calling it 10 times)\n";
     for (unsigned i = 0; i < 10; i++){
-        L1.push_back(words[rand()%10]);
+        L1.push_back(arr[rand()%10]);
     }
     
     L1.display();
@@ -338,7 +435,7 @@ void testStrings()
     
     cout << "\nTesting insert_sorted function (by calling it 10 times)\n";
     for (unsigned i = 0; i < 10; i++){
-        L1.insert_sorted(words[rand()%10]);
+        L1.insert_sorted(arr[rand()%10]);
         cout << endl;
         L1.display();
     }
@@ -350,8 +447,8 @@ void testStrings()
 	
 	cout << "\nTesting push_back() and push_front() function\n";
     for (int i = 0; i < 10; i++){
-        L2.push_front(words[i]);
-        L2.push_back(words[i]);
+        L2.push_front(arr[i]);
+        L2.push_back(arr[i]);
     }
 
 	cout << endl;
