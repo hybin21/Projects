@@ -7,8 +7,9 @@
 *******************************************************************************/
 #include <iostream>
 #include "linkedList.h"
-#include <cstdlib>     /* srand, rand */
-#include <ctime>       /* time */
+#include <stdlib.h>     /* srand, rand */
+#include <time.h>       /* time */
+
 
 using namespace std;
 

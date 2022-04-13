@@ -241,16 +241,6 @@ typename LinkedList<T>::Iterator LinkedList<T>::Iterator::operator++()
 template<typename T>
 bool LinkedList<T>::Iterator::operator==(const LinkedList<T>::Iterator& right) const
 {
-    /*
-    if(current->data == right.current->data)
-    {
-        if(current->next == right.current->next)
-        {
-            return true;
-        }
-        return false;
-    }
-    */
     return(current == right.current);
 }
 
@@ -898,31 +888,6 @@ void LinkedList<T>::remove_duplicates()
             current = current->next;
         }
     }
-    // while(current)
-    // {
-    //     if(current == head)
-    //         p = head;
-    //     else
-    //         p = current;
-    //     n = p->next;
-    //     while(n)
-    //     {
-    //         if(n->data == current->data)
-    //         {
-    //             temp = n;
-    //             p->next = n->next;
-    //             delete temp;
-    //             n = p->next;
-    //         }
-    //         else
-    //         {
-    //             n = n->next;
-    //             p = p->next;
-    //         }
-    //         current = current->next;
-    //     }
-    // }
 }
-
 #endif
 
