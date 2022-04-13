@@ -13,35 +13,53 @@
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(134, 155, 199);</string>
+  </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QLineEdit" name="INPUT_BOX">
     <property name="geometry">
      <rect>
-      <x>150</x>
-      <y>50</y>
+      <x>160</x>
+      <y>60</y>
       <width>141</width>
       <height>41</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-color: rgb(0, 0, 0);
+color: rgb(2, 2, 2);
+background-color: rgb(255, 255, 255);</string>
     </property>
    </widget>
    <widget class="QLineEdit" name="OUTPUT_BOX">
     <property name="geometry">
      <rect>
-      <x>150</x>
-      <y>240</y>
+      <x>160</x>
+      <y>250</y>
       <width>141</width>
       <height>41</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255);
+color: rgb(0, 0, 0);</string>
     </property>
    </widget>
    <widget class="QSlider" name="SLIDER">
     <property name="geometry">
      <rect>
-      <x>140</x>
-      <y>180</y>
+      <x>150</x>
+      <y>190</y>
       <width>160</width>
       <height>25</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(0, 0, 0);
+selection-color: rgb(0, 0, 0);
+alternate-background-color: rgb(0, 0, 0);
+border-color: rgb(0, 0, 0);</string>
     </property>
     <property name="orientation">
      <enum>Qt::Horizontal</enum>
@@ -50,11 +68,16 @@
    <widget class="QPushButton" name="F_BUTTON">
     <property name="geometry">
      <rect>
-      <x>150</x>
-      <y>110</y>
+      <x>160</x>
+      <y>120</y>
       <width>61</width>
       <height>51</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(0, 0, 0);
+background-color: rgb(255, 255, 255);
+border-color: rgb(0, 0, 0);</string>
     </property>
     <property name="text">
      <string>F-&gt;C</string>
@@ -63,11 +86,15 @@
    <widget class="QPushButton" name="C_BUTTON">
     <property name="geometry">
      <rect>
-      <x>230</x>
-      <y>110</y>
+      <x>240</x>
+      <y>120</y>
       <width>61</width>
       <height>51</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(0, 0, 0);
+background-color: rgb(255, 255, 255);</string>
     </property>
     <property name="text">
      <string>C-&gt;F</string>
@@ -76,11 +103,14 @@
    <widget class="QLabel" name="current">
     <property name="geometry">
      <rect>
-      <x>160</x>
-      <y>30</y>
+      <x>170</x>
+      <y>40</y>
       <width>131</width>
       <height>20</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(0, 0, 0);</string>
     </property>
     <property name="text">
      <string>Current Temperature</string>
@@ -89,11 +119,14 @@
    <widget class="QLabel" name="converted">
     <property name="geometry">
      <rect>
-      <x>150</x>
-      <y>220</y>
+      <x>160</x>
+      <y>230</y>
       <width>141</width>
       <height>20</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(0, 0, 0);</string>
     </property>
     <property name="text">
      <string>Converted Temperature</string>

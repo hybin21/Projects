@@ -41,30 +41,47 @@ public:
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
         MainWindow->resize(466, 383);
+        MainWindow->setStyleSheet(QString::fromUtf8("background-color: rgb(134, 155, 199);"));
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         INPUT_BOX = new QLineEdit(centralwidget);
         INPUT_BOX->setObjectName(QString::fromUtf8("INPUT_BOX"));
-        INPUT_BOX->setGeometry(QRect(150, 50, 141, 41));
+        INPUT_BOX->setGeometry(QRect(160, 60, 141, 41));
+        INPUT_BOX->setStyleSheet(QString::fromUtf8("border-color: rgb(0, 0, 0);\n"
+"color: rgb(2, 2, 2);\n"
+"background-color: rgb(255, 255, 255);"));
         OUTPUT_BOX = new QLineEdit(centralwidget);
         OUTPUT_BOX->setObjectName(QString::fromUtf8("OUTPUT_BOX"));
-        OUTPUT_BOX->setGeometry(QRect(150, 240, 141, 41));
+        OUTPUT_BOX->setGeometry(QRect(160, 250, 141, 41));
+        OUTPUT_BOX->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);\n"
+"color: rgb(0, 0, 0);"));
         SLIDER = new QSlider(centralwidget);
         SLIDER->setObjectName(QString::fromUtf8("SLIDER"));
-        SLIDER->setGeometry(QRect(140, 180, 160, 25));
+        SLIDER->setGeometry(QRect(150, 190, 160, 25));
+        SLIDER->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);\n"
+"selection-color: rgb(0, 0, 0);\n"
+"alternate-background-color: rgb(0, 0, 0);\n"
+"border-color: rgb(0, 0, 0);"));
         SLIDER->setOrientation(Qt::Horizontal);
         F_BUTTON = new QPushButton(centralwidget);
         F_BUTTON->setObjectName(QString::fromUtf8("F_BUTTON"));
-        F_BUTTON->setGeometry(QRect(150, 110, 61, 51));
+        F_BUTTON->setGeometry(QRect(160, 120, 61, 51));
+        F_BUTTON->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);\n"
+"background-color: rgb(255, 255, 255);\n"
+"border-color: rgb(0, 0, 0);"));
         C_BUTTON = new QPushButton(centralwidget);
         C_BUTTON->setObjectName(QString::fromUtf8("C_BUTTON"));
-        C_BUTTON->setGeometry(QRect(230, 110, 61, 51));
+        C_BUTTON->setGeometry(QRect(240, 120, 61, 51));
+        C_BUTTON->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);\n"
+"background-color: rgb(255, 255, 255);"));
         current = new QLabel(centralwidget);
         current->setObjectName(QString::fromUtf8("current"));
-        current->setGeometry(QRect(160, 30, 131, 20));
+        current->setGeometry(QRect(170, 40, 131, 20));
+        current->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);"));
         converted = new QLabel(centralwidget);
         converted->setObjectName(QString::fromUtf8("converted"));
-        converted->setGeometry(QRect(150, 220, 141, 20));
+        converted->setGeometry(QRect(160, 230, 141, 20));
+        converted->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);"));
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
