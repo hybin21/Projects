@@ -1,0 +1,72 @@
+# ninja log v5
+153	1214	1649799158462777039	CMakeFiles/LAB18.dir/mainwindow.cpp.o	360525da71e1b0e0
+152	1123	1649799158366546897	CMakeFiles/LAB18.dir/LAB18_autogen/mocs_compilation.cpp.o	50628dc6ee2ef9b1
+3	152	1649799157398835000	/Users/jessicahahm/Desktop/PCC/22Spring/CS3A /build-LAB18-Qt_6_2_4_for_macOS-Debug/LAB18_autogen/mocs_compilation.cpp	ffcfcca611ed48c0
+1214	1304	1649799158556292328	LAB18.app/Contents/MacOS/LAB18	e963374dfbb7259
+3	152	1649799157398835000	/Users/jessicahahm/Desktop/PCC/22Spring/CS3A /build-LAB18-Qt_6_2_4_for_macOS-Debug/LAB18_autogen/timestamp	ffcfcca611ed48c0
+3	152	1649799157398835000	LAB18_autogen/mocs_compilation.cpp	ffcfcca611ed48c0
+153	1165	1649799158414175451	CMakeFiles/LAB18.dir/main.cpp.o	124530db590d0af8
+3	152	1649799157398835000	LAB18_autogen/timestamp	ffcfcca611ed48c0
+3	157	1649799332362640000	LAB18_autogen/timestamp	ffcfcca611ed48c0
+3	157	1649799332362640000	LAB18_autogen/mocs_compilation.cpp	ffcfcca611ed48c0
+3	157	1649799332362640000	/Users/jessicahahm/Desktop/PCC/22Spring/CS3A /build-LAB18-Qt_6_2_4_for_macOS-Debug/LAB18_autogen/timestamp	ffcfcca611ed48c0
+3	157	1649799332362640000	/Users/jessicahahm/Desktop/PCC/22Spring/CS3A /build-LAB18-Qt_6_2_4_for_macOS-Debug/LAB18_autogen/mocs_compilation.cpp	ffcfcca611ed48c0
+157	1225	1649799333430152989	CMakeFiles/LAB18.dir/LAB18_autogen/mocs_compilation.cpp.o	50628dc6ee2ef9b1
+158	1293	1649799333501419884	CMakeFiles/LAB18.dir/main.cpp.o	124530db590d0af8
+158	1304	1649799333512866454	CMakeFiles/LAB18.dir/mainwindow.cpp.o	360525da71e1b0e0
+5	131	1649799342204206000	LAB18_autogen/timestamp	ffcfcca611ed48c0
+5	131	1649799342204206000	LAB18_autogen/mocs_compilation.cpp	ffcfcca611ed48c0
+5	131	1649799342204206000	/Users/jessicahahm/Desktop/PCC/22Spring/CS3A /build-LAB18-Qt_6_2_4_for_macOS-Debug/LAB18_autogen/timestamp	ffcfcca611ed48c0
+5	131	1649799342204206000	/Users/jessicahahm/Desktop/PCC/22Spring/CS3A /build-LAB18-Qt_6_2_4_for_macOS-Debug/LAB18_autogen/mocs_compilation.cpp	ffcfcca611ed48c0
+131	649	1649799342722738343	CMakeFiles/LAB18.dir/LAB18_autogen/mocs_compilation.cpp.o	50628dc6ee2ef9b1
+131	690	1649799342763156792	CMakeFiles/LAB18.dir/main.cpp.o	124530db590d0af8
+131	728	1649799342802072212	CMakeFiles/LAB18.dir/mainwindow.cpp.o	360525da71e1b0e0
+728	800	1649799342876540496	LAB18.app/Contents/MacOS/LAB18	e963374dfbb7259
+3	183	1649799998506440000	LAB18_autogen/timestamp	ffcfcca611ed48c0
+3	183	1649799998506440000	LAB18_autogen/mocs_compilation.cpp	ffcfcca611ed48c0
+3	183	1649799998506440000	/Users/jessicahahm/Desktop/PCC/22Spring/CS3A /build-LAB18-Qt_6_2_4_for_macOS-Debug/LAB18_autogen/timestamp	ffcfcca611ed48c0
+3	183	1649799998506440000	/Users/jessicahahm/Desktop/PCC/22Spring/CS3A /build-LAB18-Qt_6_2_4_for_macOS-Debug/LAB18_autogen/mocs_compilation.cpp	ffcfcca611ed48c0
+184	1196	1649799999522385539	CMakeFiles/LAB18.dir/LAB18_autogen/mocs_compilation.cpp.o	50628dc6ee2ef9b1
+184	1242	1649799999571492830	CMakeFiles/LAB18.dir/main.cpp.o	124530db590d0af8
+185	1290	1649799999620648080	CMakeFiles/LAB18.dir/mainwindow.cpp.o	360525da71e1b0e0
+1290	1382	1649799999715614649	LAB18.app/Contents/MacOS/LAB18	e963374dfbb7259
+5	30	1649800290123565134	LAB18_autogen/timestamp	ffcfcca611ed48c0
+5	30	1649800290123565134	LAB18_autogen/mocs_compilation.cpp	ffcfcca611ed48c0
+5	30	1649800290123565134	/Users/jessicahahm/Desktop/PCC/22Spring/CS3A /build-LAB18-Qt_6_2_4_for_macOS-Debug/LAB18_autogen/timestamp	ffcfcca611ed48c0
+5	30	1649800290123565134	/Users/jessicahahm/Desktop/PCC/22Spring/CS3A /build-LAB18-Qt_6_2_4_for_macOS-Debug/LAB18_autogen/mocs_compilation.cpp	ffcfcca611ed48c0
+32	543	1649800290632688438	CMakeFiles/LAB18.dir/mainwindow.cpp.o	360525da71e1b0e0
+543	620	1649800290711954932	LAB18.app/Contents/MacOS/LAB18	e963374dfbb7259
+4	140	1649800502976891000	LAB18_autogen/timestamp	ffcfcca611ed48c0
+4	140	1649800502976891000	LAB18_autogen/mocs_compilation.cpp	ffcfcca611ed48c0
+4	140	1649800502976891000	/Users/jessicahahm/Desktop/PCC/22Spring/CS3A /build-LAB18-Qt_6_2_4_for_macOS-Debug/LAB18_autogen/timestamp	ffcfcca611ed48c0
+4	140	1649800502976891000	/Users/jessicahahm/Desktop/PCC/22Spring/CS3A /build-LAB18-Qt_6_2_4_for_macOS-Debug/LAB18_autogen/mocs_compilation.cpp	ffcfcca611ed48c0
+140	938	1649800503772114819	CMakeFiles/LAB18.dir/main.cpp.o	124530db590d0af8
+140	941	1649800503778324476	CMakeFiles/LAB18.dir/LAB18_autogen/mocs_compilation.cpp.o	50628dc6ee2ef9b1
+140	976	1649800503814090940	CMakeFiles/LAB18.dir/mainwindow.cpp.o	360525da71e1b0e0
+976	1072	1649800503913671618	LAB18.app/Contents/MacOS/LAB18	e963374dfbb7259
+4	28	1649800550045948118	LAB18_autogen/timestamp	ffcfcca611ed48c0
+4	28	1649800550045948118	LAB18_autogen/mocs_compilation.cpp	ffcfcca611ed48c0
+4	28	1649800550045948118	/Users/jessicahahm/Desktop/PCC/22Spring/CS3A /build-LAB18-Qt_6_2_4_for_macOS-Debug/LAB18_autogen/timestamp	ffcfcca611ed48c0
+4	28	1649800550045948118	/Users/jessicahahm/Desktop/PCC/22Spring/CS3A /build-LAB18-Qt_6_2_4_for_macOS-Debug/LAB18_autogen/mocs_compilation.cpp	ffcfcca611ed48c0
+29	576	1649800550589474394	CMakeFiles/LAB18.dir/mainwindow.cpp.o	360525da71e1b0e0
+576	651	1649800550667736228	LAB18.app/Contents/MacOS/LAB18	e963374dfbb7259
+4	32	1649800751308914185	LAB18_autogen/timestamp	ffcfcca611ed48c0
+4	32	1649800751308914185	LAB18_autogen/mocs_compilation.cpp	ffcfcca611ed48c0
+4	32	1649800751308914185	/Users/jessicahahm/Desktop/PCC/22Spring/CS3A /build-LAB18-Qt_6_2_4_for_macOS-Debug/LAB18_autogen/timestamp	ffcfcca611ed48c0
+4	32	1649800751308914185	/Users/jessicahahm/Desktop/PCC/22Spring/CS3A /build-LAB18-Qt_6_2_4_for_macOS-Debug/LAB18_autogen/mocs_compilation.cpp	ffcfcca611ed48c0
+33	761	1649800752028788532	CMakeFiles/LAB18.dir/mainwindow.cpp.o	360525da71e1b0e0
+761	852	1649800752127739696	LAB18.app/Contents/MacOS/LAB18	e963374dfbb7259
+9	149	1649801022080205000	LAB18_autogen/timestamp	ffcfcca611ed48c0
+9	149	1649801022080205000	LAB18_autogen/mocs_compilation.cpp	ffcfcca611ed48c0
+9	149	1649801022080205000	/Users/jessicahahm/Desktop/PCC/22Spring/CS3A /build-LAB18-Qt_6_2_4_for_macOS-Debug/LAB18_autogen/timestamp	ffcfcca611ed48c0
+9	149	1649801022080205000	/Users/jessicahahm/Desktop/PCC/22Spring/CS3A /build-LAB18-Qt_6_2_4_for_macOS-Debug/LAB18_autogen/mocs_compilation.cpp	ffcfcca611ed48c0
+149	893	1649801022823843687	CMakeFiles/LAB18.dir/LAB18_autogen/mocs_compilation.cpp.o	50628dc6ee2ef9b1
+149	897	1649801022829761126	CMakeFiles/LAB18.dir/main.cpp.o	124530db590d0af8
+149	939	1649801022872408606	CMakeFiles/LAB18.dir/mainwindow.cpp.o	360525da71e1b0e0
+939	1028	1649801022963989586	LAB18.app/Contents/MacOS/LAB18	e963374dfbb7259
+2	22	1649801103144034838	LAB18_autogen/timestamp	ffcfcca611ed48c0
+2	22	1649801103144034838	LAB18_autogen/mocs_compilation.cpp	ffcfcca611ed48c0
+2	22	1649801103144034838	/Users/jessicahahm/Desktop/PCC/22Spring/CS3A /build-LAB18-Qt_6_2_4_for_macOS-Debug/LAB18_autogen/timestamp	ffcfcca611ed48c0
+2	22	1649801103144034838	/Users/jessicahahm/Desktop/PCC/22Spring/CS3A /build-LAB18-Qt_6_2_4_for_macOS-Debug/LAB18_autogen/mocs_compilation.cpp	ffcfcca611ed48c0
+23	566	1649801103684022255	CMakeFiles/LAB18.dir/mainwindow.cpp.o	360525da71e1b0e0
+566	641	1649801103761974698	LAB18.app/Contents/MacOS/LAB18	e963374dfbb7259

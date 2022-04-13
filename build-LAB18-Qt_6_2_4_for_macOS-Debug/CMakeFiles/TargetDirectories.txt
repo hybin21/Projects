@@ -1,0 +1,5 @@
+/Users/jessicahahm/Desktop/PCC/22Spring/CS3A /build-LAB18-Qt_6_2_4_for_macOS-Debug/CMakeFiles/rebuild_cache.dir
+/Users/jessicahahm/Desktop/PCC/22Spring/CS3A /build-LAB18-Qt_6_2_4_for_macOS-Debug/CMakeFiles/edit_cache.dir
+/Users/jessicahahm/Desktop/PCC/22Spring/CS3A /build-LAB18-Qt_6_2_4_for_macOS-Debug/CMakeFiles/LAB18.dir
+/Users/jessicahahm/Desktop/PCC/22Spring/CS3A /build-LAB18-Qt_6_2_4_for_macOS-Debug/CMakeFiles/LAB18_autogen_timestamp_deps.dir
+/Users/jessicahahm/Desktop/PCC/22Spring/CS3A /build-LAB18-Qt_6_2_4_for_macOS-Debug/CMakeFiles/LAB18_autogen.dir

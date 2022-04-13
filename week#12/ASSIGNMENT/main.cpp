@@ -39,7 +39,8 @@ int main()
 
 void testInts()
 {
-    LinkedList<int> L1, L2;
+    LinkedList<int> L1;
+    LinkedList<int> L2;
     
     LinkedList<int>::Iterator it;
 
@@ -48,7 +49,7 @@ void testInts()
     {
         cout << L1.front() << endl;
     }
-    catch(ListEmpty<int> e)
+    catch(ListEmpty e)
     {
         cout << e.what() << endl;
     }
@@ -56,7 +57,7 @@ void testInts()
     {
         cout << L1.back() << endl;
     }
-    catch(ListEmpty<int> e)
+    catch(ListEmpty e)
     {
         cout << e.what() << endl;
     }
@@ -64,7 +65,7 @@ void testInts()
     {
         L1.pop_front();
     }
-    catch(ListEmpty<int> e)
+    catch(ListEmpty e)
     {
         cout << e.what() << endl;
     }
@@ -162,7 +163,7 @@ void testDoubles()
     {
         cout << L1.front() << endl;
     }
-    catch(const ListEmpty<int> &e)
+    catch(const ListEmpty &e)
     {
         cout << "List is empty so there is no front" << endl;
     }
@@ -170,7 +171,7 @@ void testDoubles()
     {
         cout << L1.back() << endl;
     }
-    catch(const ListEmpty<int> &e)
+    catch(const ListEmpty &e)
     {
         cout << "List is empty so there is no back" << endl;
     }
@@ -270,7 +271,7 @@ void testStrings()
     {
         cout << L1.front() << endl;
     }
-    catch(const ListEmpty<int> &e)
+    catch(const ListEmpty &e)
     {
         cout << "List is empty so there is no front" << endl;
     }
@@ -278,7 +279,7 @@ void testStrings()
     {
         cout << L1.back() << endl;
     }
-    catch(const ListEmpty<int> &e)
+    catch(const ListEmpty &e)
     {
         cout << "List is empty so there is no back" << endl;
     }

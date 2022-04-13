@@ -118,7 +118,7 @@ T LinkedList<T>::Iterator::operator*()
 }   
 
 template<typename T>
-LinkedList<T>::Iterator LinkedList<T>::Iterator::operator++()
+typename LinkedList<T>::Iterator LinkedList<T>::Iterator::operator++()
 {
     if(current)
         current = current->next;
@@ -150,7 +150,7 @@ bool LinkedList<T>::Iterator::operator!=(const LinkedList<T>::Iterator& right) c
 template<typename T>
 LinkedList<T>::LinkedList()
 {
-    Node = Node(0);
+    Node<T> * node = new Node<T>;
     head = NULL;
     tail = NULL;
 }
@@ -168,7 +168,7 @@ LinkedList<T>::LinkedList(const LinkedList<T> & list)
     {
         head = NULL;
         tail = NULL;
-        Node * current = list.head;
+        Node<T> * current = list.head;
         while(current)
         {
             push_back(current->data);
@@ -180,10 +180,10 @@ LinkedList<T>::LinkedList(const LinkedList<T> & list)
 template<typename T>
 LinkedList<T>::~LinkedList()
 {
-    Node * current = head;
+    Node<T> * current = head;
     while(!current)
     {
-        Node * next = current->next;
+        Node<T> * next = current->next;
         delete current;
         current = next;
     }
@@ -192,8 +192,8 @@ LinkedList<T>::~LinkedList()
 template<typename T>
 LinkedList<T>& LinkedList<T>::operator=(const LinkedList<T> & source)
 {
-    Node * current;
-    Node * temp = source.head;
+    Node<T> * current;
+    Node<T> * temp = source.head;
 
     if(!head)
     {
@@ -229,29 +229,35 @@ template<typename T>
 const T& LinkedList<T>::front() const throw(ListEmpty)
 {
     if(head == NULL)
-        throw(ListEmpty)
+        throw(ListEmpty);
     else
+    {
         return head->data;
+    }
+        
 }
 
 template<typename T>
 const T & LinkedList<T>::back() const throw(ListEmpty)
 {   
     if(head == NULL)
-        throw(ListEmpty)
-    else 
+        throw(ListEmpty);
+    else
+    {
         return tail->data;
+    }
+        
 }
 
 template<typename T>
-LinkedList<T>::Iterator LinkedList<T>::begin()
+typename LinkedList<T>::Iterator LinkedList<T>::begin()
 {
     LinkedList<T>::Iterator  currentIterator(head);
     return currentIterator;
 }
 
 template<typename T>
-LinkedList<T>::Iterator LinkedList<T>::end()
+typename LinkedList<T>::Iterator LinkedList<T>::end()
 {
     LinkedList<T>::Iterator  currentIterator(tail->next);
     return currentIterator;
@@ -290,7 +296,7 @@ T LinkedList<T>::sum() const
 template<typename T>
 void LinkedList<T>::display() const
 {
-    Node * current = head;
+    Node<T> * current = head;
     while(current)
     {
         if(current->next != NULL)
@@ -313,7 +319,7 @@ bool LinkedList<T>::isEmpty() const
 template<typename T>
 void LinkedList<T>::push_front(const T & value)
 {
-    Node * temp = new Node(value);
+    Node<T> * temp = new Node<T>(value);
     if(!head)
     {
         head = temp;
@@ -329,7 +335,7 @@ void LinkedList<T>::push_front(const T & value)
 template<typename T>
 void LinkedList<T>::push_back(const T & value)
 {
-    Node * temp = new Node(value);
+    Node<T> * temp = new Node<T>(value);
 
     if(!head)
     {
@@ -353,7 +359,7 @@ void LinkedList<T>::pop_front() throw(ListEmpty)
     {
         if(head)
         {
-            Node * temp = head;
+            Node<T> * temp = head;
             head = head->next;
             delete temp;
         }
@@ -363,10 +369,10 @@ void LinkedList<T>::pop_front() throw(ListEmpty)
 template<typename T>
 void LinkedList<T>::clear()
 {
-    Node * current = head;
+    Node<T> * current = head;
     while(!current)
     {
-        Node * next = current->next;
+        Node<T> * next = current->next;
         delete current;
         current = next;
     }
@@ -378,9 +384,9 @@ void LinkedList<T>::clear()
 template<typename T>
 void LinkedList<T>::select_sort()
 {
-    Node * current = head;
-    Node * after;
-    Node * min;
+    Node<T> * current = head;
+    Node<T> * after;
+    Node<T> * min;
     T val;
 
     while(current)
@@ -394,7 +400,7 @@ void LinkedList<T>::select_sort()
             after = after->next;
         }
         val = current->data;
-        crurent->data = min->data;
+        current->data = min->data;
         min->data = val;
 
         current = current->next;
@@ -404,10 +410,10 @@ void LinkedList<T>::select_sort()
 template<typename T>
 void LinkedList<T>::insert_sorted(const T & value)
 {
-    Node * current = head;
-    Node* newNode = new Node(value);
+    Node<T> * current = head;
+    Node<T> * newNode = new Node<T>(value);
 
-    i(!head || haed->data >= value)
+    if(!head || head->data >= value)
         push_front(value);
     else
     {
@@ -429,10 +435,10 @@ void LinkedList<T>::insert_sorted(const T & value)
 template<typename T>
 void LinkedList<T>::remove_duplicates()
 {
-    Node * current = head;
-    Node * p;
-    Node * n;
-    Node * temp;
+    Node<T> * current = head;
+    Node<T> * p;
+    Node<T> * n;
+    Node<T> * temp;
 
     if(head)
     {
