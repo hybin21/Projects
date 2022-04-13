@@ -884,7 +884,6 @@ void LinkedList<T>::remove_duplicates()
                 else
                     n = n->next;
             }
-            p = current;
             current = current->next;
         }
     }
