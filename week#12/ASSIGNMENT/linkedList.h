@@ -278,9 +278,8 @@ bool LinkedList<T>::Iterator::operator!=(const LinkedList<T>::Iterator& right) c
 template<typename T>
 LinkedList<T>::LinkedList()
 {
-    Node<T> * node = new Node<T>(0);
-    head = NULL;
-    tail = NULL;
+    this->head = NULL;
+    this->tail = NULL;
 }
 
 /*****************************************************************************
@@ -326,12 +325,15 @@ template<typename T>
 LinkedList<T>::~LinkedList()
 {
     Node<T> * current = head;// CALC - pointer to be to destry class atributes
-    while(!current)
+    while(current)
     {   
-        Node<T> * next = current->next; // CALC - points the next node
+        current = head->next; // CALC - points the next node
         delete current;
-        current = next;
+        head = current;
     }
+    head = NULL;
+    tail = NULL;
+        cout << "destructor begin\n";
 }
 
 

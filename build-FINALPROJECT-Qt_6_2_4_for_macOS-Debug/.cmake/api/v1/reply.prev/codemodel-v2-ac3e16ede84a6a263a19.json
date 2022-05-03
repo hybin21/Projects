@@ -1,0 +1,78 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "FINALPROJECT",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "FINALPROJECT::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-FINALPROJECT-Debug-7970d85360da79bfcfe4.json",
+					"name" : "FINALPROJECT",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "FINALPROJECT_autogen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-FINALPROJECT_autogen-Debug-874645244aa7f0e6acd0.json",
+					"name" : "FINALPROJECT_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "FINALPROJECT_autogen_timestamp_deps::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-FINALPROJECT_autogen_timestamp_deps-Debug-06ea4309509f62ca5f62.json",
+					"name" : "FINALPROJECT_autogen_timestamp_deps",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/Users/jessicahahm/Desktop/PCC/22Spring/CS3A /build-FINALPROJECT-Qt_6_2_4_for_macOS-Debug",
+		"source" : "/Users/jessicahahm/Desktop/PCC/22Spring/CS3A /FINALPROJECT"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}

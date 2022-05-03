@@ -15,6 +15,8 @@ using namespace std;
 
 const int ROWS = 11;    // row of the maze
 const int COLUMNS = 13; // column of the maze
+bool END = true;
+int COUNT = 0;
 
 /*******************************************************************************
  *
@@ -184,90 +186,137 @@ void generateMaze(bool arr[][COLUMNS],  // CALC - array with boolean
     order.reserve(4);
     directionOrder(order);
 
-    if(row == 0)
+    if(row >= ROWS -1 || column >= COLUMNS -1)
+        return;
+    else
     {
-        arr[row][column] = false;
-        arr[row+1][column] = false;
-        generateMaze(arr, row+1,column,end);
-    }
-    else if(order.size() > 0)
-    {
-        for(int i = order.capacity()-1; i >= 0; i--)
+        if(row == 0)
         {
-            switch(order[i])
+            arr[row][column] = false;
+            arr[row+1][column] = false;
+            generateMaze(arr,row+1,column,end);
+        }
+        else if(order.size()>0)
+        {
+            for(int i = order.capacity()-1; i >= 0; i--)
             {
-                // PROCESSING - Check East
-                case 1:
-                    if(row !=0 && row != ROWS-1)
+                switch(order[i])
+                {
+                    case 1: 
+                    cout << "east\n";
+                    if(row != 0 && row != ROWS-1)
                     {
-                        if(arr[row][column +1] && arr[row][column+2] && column + 2 < COLUMNS-1)
+                        if(arr[row][column+1] && arr[row][column+2] && column+2 < COLUMNS-1)
                         {
-                            arr[row][column + 1] = false;
-                            arr[row][column + 2] = false;
+                            arr[row][column+1] = false;
+                            arr[row][column+2] = false;
                             order.pop_back();
+                            displayMaze(arr);
                             generateMaze(arr,row,column+2,end);
                         }
                     }
                     else
                         order.pop_back();
                     break;
-                // PROCESSING - Check West
-                case 2:
-                    if(row != 0 && row != ROWS-1)
-                    {
-                        if(arr[row][column -1] && arr[row][column-2] && column - 2 > 0)
+
+                    case 2:
+                    cout << "west\n";
+                        if(row > 0 && row < ROWS-1)
                         {
-                            arr[row][column - 1] = false;
-                            arr[row][column - 2] = false;
+                            if(arr[row][column -1] && arr[row][column-2] && column -2 > 0)
+                            {
+                                arr[row][column-1] = false;
+                                arr[row][column-2] = false;
+                                order.pop_back();
+                                displayMaze(arr);
+                                generateMaze(arr,row,column-2,end);
+                            }
+                            
+                        }
+                        else
                             order.pop_back();
-                            generateMaze(arr,row,column-2,end);
-                        }
-                    }
-                    else
-                        order.pop_back();
-                    break;
-                // PROCESSING - Check North
-                case 3:
-                    if(row != 0)
-                    {
-                        if(arr[row-1][column] && arr[row-2][column] && row - 2 > 0 )
+                        break;
+
+                    case 3:
+                        cout << "north\n";
+                        if(row != 0)
                         {
-                            arr[row - 1][column] = false;
-                            arr[row - 2][column] = false;
+                            if(arr[row-1][column] && arr[row-2][column] && row-2>0)
+                            {
+                                arr[row-1][column] = false;
+                                arr[row-2][column] = false;
+                                order.pop_back();
+                                displayMaze(arr);
+                                generateMaze(arr,row-2,column,end);
+                            }
+                        }
+                        else
                             order.pop_back();
-                            generateMaze(arr,row-2,column,end);
-                        }
-                    }
-                    break;
-                // PROCESSING - Check South
-                case 4:
-                    if(row + 2 == ROWS-1 )
-                    {
-                        if(column == end)
-                        {
-                            arr[row+1][column] = false;
-                            arr[row+2][column] = false;
-                        }
-                        order.pop_back();
-                    }
-                    else if(row+1 == ROWS - 1)
-                    {
-                        if(column == end)
-                            arr[row+1][column] = false;
-                        order.pop_back();
-                    }
-                    else if(arr[row+1][column] && arr[row+2][column] && row+1 < ROWS)
-                    {
-                        arr[row+1][column] = false;
-                        arr[row+2][column] = false;
-                        order.pop_back();
-                        generateMaze(arr,row+2,column,end);
-                    }
-                    
-                    break;
+                        break;
+
+                    case 4:
+                    cout << "south\n";
+                        // if(row + 2 == ROWS - 1)
+                        // {
+                        //     if(column == end)
+                        //     {
+                        //         arr[row+1][column] = false;
+                        //         arr[row+2][column] = false;
+                        //     }
+                        //     order.pop_back();
+                        // }
+                        // else if(row+1 == ROWS-1)
+                        // {
+                        //     if(column == end)
+                        //         arr[row+1][column] = false;
+                        //     order.pop_back();
+                        // }
+                        // else if(arr[row+1][column] && arr[row+2][column]&& row+1<ROWS -1)
+                        // {
+                        //     arr[row+1][column] = false;
+                        //     arr[row+2][column] = false;
+                        //     generateMaze(arr,row+2,column,end);
+                        //     order.pop_back();
+                        // }
+                        // if(arr[row+1][column] && arr[row+2][column] && row + 1 < ROWS - 1)
+                        // {
+                        //     arr[row+1][column] = false;
+                        //     arr[row+2][column] = false;
+                        //     displayMaze(arr);
+                        //     generateMaze(arr,row+2,column,end);
+                        //     order.pop_back();
+                        // }
+                        // else if(row +2 == ROWS - 1 )
+                        //     { 
+                        //         if(COUNT == 0)
+                        //         {
+                        //             arr[row+1][column] = false;
+                        //             arr[row+2][column] = false;
+                        //             COUNT++;
+                        //         }
+                        //         else
+                        //             arr[row+1][column] = false;
+                        //     }
+                        // else if(row+1 == ROWS-1)
+                        // {
+                        //     if(COUNT == 0)
+                        //     {
+                        //         arr[row+1][column] = false;
+                        //         COUNT++;
+                        //     }
+                        // }
+
+                        displayMaze(arr);
+                        order.pop_back();    
+
+                        break;
+
+                }
+
             }
         }
     }
+
 }
 
 /*******************************************************************************
